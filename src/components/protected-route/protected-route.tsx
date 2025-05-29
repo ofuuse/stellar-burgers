@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import { Navigate, useLocation } from 'react-router';
-import { useSelector } from '../../services/store';
+import { useSelector } from '@app-store';
 import {
   isAuthCheckedSelector,
   isLoadingSelector
 } from '../../services/slices/userSlice';
-import { Preloader } from '../ui/preloader';
+import { Preloader } from '@ui';
 
 type ProtectedRouteProps = {
   children: React.ReactElement;
@@ -13,9 +13,9 @@ type ProtectedRouteProps = {
 };
 
 export const ProtectedRoute: FC<ProtectedRouteProps> = ({
-                                                          onlyUnAuth,
-                                                          children
-                                                        }: ProtectedRouteProps) => {
+  onlyUnAuth,
+  children
+}: ProtectedRouteProps) => {
   const isAuthChecked = useSelector(isAuthCheckedSelector);
   const loadingSelector = useSelector(isLoadingSelector);
   const location = useLocation();

@@ -2,7 +2,7 @@ import { FC, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TConstructorIngredient } from '@utils-types';
 import { BurgerConstructorUI } from '@ui';
-import { useDispatch, useSelector } from '../../services/store';
+import { useDispatch, useSelector } from '@app-store';
 import {
   burgerAssemblerSelector,
   clearburgerAssembler
@@ -34,10 +34,7 @@ export const BurgerConstructor: FC = () => {
     };
 
     const isOrderValid = () => {
-      if (!constructorItems.bun || orderRequest) {
-        return false;
-      }
-      return true;
+      return !(!constructorItems.bun || orderRequest);
     };
 
     if (handleNavigation() && isOrderValid()) {
@@ -63,7 +60,6 @@ export const BurgerConstructor: FC = () => {
     dispatch(clearburgerAssembler());
   };
 
-
   const price = useMemo(
     () =>
       (constructorItems.bun ? constructorItems.bun.price * 2 : 0) +
@@ -73,8 +69,6 @@ export const BurgerConstructor: FC = () => {
       ),
     [constructorItems]
   );
-
-
 
   return (
     <BurgerConstructorUI

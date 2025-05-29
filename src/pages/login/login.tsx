@@ -6,7 +6,7 @@ import {
   errorSelector,
   loginUserThunk
 } from '../../services/slices/userSlice';
-import { useDispatch, useSelector } from '../../services/store';
+import { useDispatch, useSelector } from '@app-store';
 import { LoginUI } from '@ui-pages';
 
 export const Login: FC = () => {
@@ -34,7 +34,6 @@ export const Login: FC = () => {
     <LoginUI
       errorText={error!}
       email={email}
-
       password={password}
       setEmail={setEmail}
       setPassword={setPassword}
