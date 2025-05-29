@@ -2,8 +2,14 @@
   margin: 0 auto;
   width: 640px;
 }
+
 .number {
   text-align: center;
+}
+
+.number_modal {
+    position: absolute;
+    top: 63px;
 }
 
 .status {
@@ -12,6 +18,7 @@
 
 .header {
   margin: 0;
+  margin-top: 35px;
 }
 
 .img_wrap {
