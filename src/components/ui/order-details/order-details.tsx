@@ -13,7 +13,7 @@ export const OrderDetailsUI: React.FC<OrderDetailsUIProps> = ({
     >
       {orderNumber}
     </h2>
-    <p className="text text_type_main-medium">идентификатор заказа</p>
+    <p className='text text_type_main-medium'>идентификатор заказа</p>
     <img
       className={styles.img}
       src={doneImg}

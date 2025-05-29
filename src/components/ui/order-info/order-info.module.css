@@ -2,14 +2,15 @@
   margin: 0 auto;
   width: 640px;
 }
-
 .number {
+  /* position: absolute;
+  top: 63px; */
   text-align: center;
 }
 
 .number_modal {
-    position: absolute;
-    top: 63px;
+  position: absolute;
+  top: 63px;
 }
 
 .status {

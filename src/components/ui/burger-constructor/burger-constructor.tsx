@@ -25,7 +25,7 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
         data-cy={'bun_constructor_item_up'}
       >
         <ConstructorElement
-          type="top"
+          type='top'
           isLocked
           text={`${constructorItems.bun.name} (верх)`}
           price={constructorItems.bun.price}
@@ -66,7 +66,7 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
         data-cy={'bun_constructor_item_down'}
       >
         <ConstructorElement
-          type="bottom"
+          type='bottom'
           isLocked
           text={`${constructorItems.bun.name} (низ)`}
           price={constructorItems.bun.price}
